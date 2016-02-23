@@ -31,6 +31,7 @@ gem 'thin'
 gem 'stripe'
 gem 'devise'
 
+gem 'omniauth-stripe-connect'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
