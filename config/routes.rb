@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  get 'users/index'
-
-  get 'users/show'
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
   root to: "users#index"
-
-  devise_for :users
 
   get  "callback" => "oauth_callbacks#callback"
   post "callback" => "oauth_callbacks#callback"
