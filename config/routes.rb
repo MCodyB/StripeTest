@@ -7,6 +7,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get  "callback" => "auth#callback"
+  post "callback" => "auth#callback"
+
+
   resources :users, only: [:index, :show]
 
   resources :charges

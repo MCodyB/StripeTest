@@ -1,2 +1,5 @@
 <h1>Users#show</h1>
 <p><%= @user.email %></p>
+<div class="stripe-connect-container">
+  <%= link_to image_tag("light-on-light/light-on-light.png"), "https://connect.stripe.com/oauth/authorize?response_type=code&client_id=#{ENV["STRIPE_CLIENT_ID"]}&scope=read_write" %>
+</div>
