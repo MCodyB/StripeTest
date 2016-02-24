@@ -9,7 +9,7 @@
 <body>
   <h1 id="stripetest">StripeTest</h1>
   <% if current_user %>
-    <%= link_to "Log Out", destroy_user_session_path %> <%= current_user.email %>
+    <%= link_to "Log Out", destroy_user_session_path, method: :delete %> <%= current_user.email %>
   <% else %>
     <%= link_to "Log In", new_user_session_path %>
     <%= link_to "Sign Up", new_user_registration_path %>
